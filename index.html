@@ -66,19 +66,21 @@
             color: white;
         }
         #image1 {
-            background-image: url("./img1.png");
+            background-image: url("./img1.jpg");
+            height: 200px;
+
         }
         
         #image2 {
-            background-image: url("./img2.png");
+            background-image: url("./img2.jpg");
         }
         
         #image3 {
-            background-image: url("./img3.png");
+            background-image: url("./img3.jpg");
         }
         
         #image4 {
-            background-image: url("./img4.png");
+            background-image: url("./img4.jpg");
         }
         .photo-description {
             /* 배경은 검게, 글자는 흰 색으로 */
@@ -122,9 +124,12 @@
             } else if (number === 2) {
             document.querySelector("#desc2").classList.remove("hideText");
             document.querySelector("#desc2").classList.add("showText");
+            } else if (number === 3) {
+                document.querySelector("#desc3").classList.remove("hideText");
+                document.querySelector("#desc3").classList.add("showText");
             } else {
-            document.querySelector("#desc3").classList.remove("hideText");
-            document.querySelector("#desc3").classList.add("showText");
+            document.querySelector("#desc4").classList.remove("hideText");
+            document.querySelector("#desc4").classList.add("showText");
             }
         }
         
@@ -138,9 +143,12 @@
             } else if (number === 2) {
             document.querySelector("#desc2").classList.remove("showText");
             document.querySelector("#desc2").classList.add("hideText");
+            } else if (number === 3) {
+                document.querySelector("#desc3").classList.remove("showText");
+                document.querySelector("#desc3").classList.add("hideText");
             } else {
-            document.querySelector("#desc3").classList.remove("showText");
-            document.querySelector("#desc3").classList.add("hideText");
+            document.querySelector("#desc4").classList.remove("showText");
+            document.querySelector("#desc4").classList.add("hideText");
             }
         }
         
@@ -160,7 +168,7 @@
                 onclick="alertText(1)"
             >
                 <span id="desc1" class="photo-description">
-                    첫번째 이미지 설명
+                    할머니 집에서 졸다가
                 </span>
             </div>
             <div id="image2" class="photo-frame"
@@ -169,7 +177,7 @@
                 onclick="alertText(2)"
             >
                 <span id="desc2" class="photo-description">
-                    두번째 이미지 설명
+                    눈물 찔끔 (☍д⁰)
                 </span>
             </div>
             <div id="image3" class="photo-frame"
@@ -178,20 +186,27 @@
                 onclick="alertText(3)"
             >
                 <span id="desc3" class="photo-description">
-                    세번째 이미지 설명
+                    요염한 포~오즈
                 </span>
             </div>
-            <div class="photo-frame">
-                <iframe 
+            <div id="image4" class="photo-frame"
+                onmouseover="showText(4)"
+                onmouseout="hideText(4)"
+                onclick="alertText(4)"
+            >
+                <!--<iframe 
                     src="https://www.youtube.com/embed/selkk5MpGVo"
                     frameborder="0"
                     class="video"
-                ></iframe>
+                ></iframe> -->
+                <span id="desc4" class="photo-description">
+                    기여운 동물 친구들
+                </span>
             </div>
         </div>
         <div class="footer">
             <p class="f-title">Happy Lunch Time</p>
-            <p ckass="f-date">2023.03.16</p>
+            <p ckass="f-date">2023.03.17</p>
         </div>
     </div>
 </body>
